@@ -1,23 +1,20 @@
 ## Synopsis
 
-This project contains sample solution and tests for the coding challenges provided by www.codeeval.com.
+This project contains solutions and tests for the coding challenges provided by www.codeeval.com.
+It is based on ![The Haskell Tool Stack](www.haskellstack.org).
 
-## Motivation
+## Build
 
-Improving Haskell skills, comparing results with others.
+Run **stack build**.
 
-## Building
+## Run
 
-Make sure the Haskell tool stack is installed, then run **stack build**.
+Adapt *app\Main.hs* to point to the desired example, then run **stack exec CodeEval-exe.exe** or alternatively **stack run** (using the ![stack-run](https://hackage.haskell.org/package/stack-run) package).
 
-## Executing
+## Test
 
-Adapt **app\Main.hs** to point to the desired example, then run **stack exec CodeEval-exe.exe**.
-
-## Tests
-
-Make sure the Haskell tool stack is installed, then run **stack test**.
+Run **stack test**.
 
 ## License
 
-BSD3, see **LICENSE** file.
+MIT, see **LICENSE** file.

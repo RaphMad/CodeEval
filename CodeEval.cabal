@@ -1,9 +1,9 @@
 name:                CodeEval
 version:             0.1.0.0
-synopsis:            Contains solutions to examples from www.codeeval.com
+synopsis:            Contains solutions to challenges from www.codeeval.com
 description:         Please see README.md
 homepage:            https://github.com/RaphMad/CodeEval#readme
-license:             BSD3
+license:             MIT
 license-file:        LICENSE
 author:              Raphael Mader
 maintainer:          RaphMad@users.noreply.github.com
@@ -15,7 +15,7 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  exposed-modules:     Examples.FizzBuzz
+  exposed-modules:     FizzBuzz
   build-depends:       base >= 4.7 && < 5
   default-language:    Haskell2010
 

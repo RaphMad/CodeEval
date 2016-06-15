@@ -1,6 +1,6 @@
 module Main where
 
-import Examples.FizzBuzz
+import qualified FizzBuzz
 
 main :: IO ()
-main = Examples.FizzBuzz.main
+main = FizzBuzz.main
