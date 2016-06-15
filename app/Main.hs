@@ -3,4 +3,4 @@ module Main where
 import Examples.FizzBuzz
 
 main :: IO ()
-main = someFunc
+main = Examples.FizzBuzz.main

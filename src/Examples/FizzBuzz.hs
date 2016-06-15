@@ -1,6 +1,4 @@
-module Examples.FizzBuzz
-    ( someFunc
-    ) where
+module Examples.FizzBuzz where
 
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"
+main :: IO ()
+main = putStrLn "someFunc"
