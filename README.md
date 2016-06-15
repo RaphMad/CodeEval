@@ -5,15 +5,15 @@ It is based on [The Haskell Tool Stack](www.haskellstack.org).
 
 ## Build
 
-Execute **stack build**.
+Execute `stack build`.
 
 ## Run
 
-Adapt **app\Main.hs** to point to the desired example, then execute *stack exec CodeEval-exe.exe*.
+Adapt **app\Main.hs** to point to the desired example, then execute `stack exec CodeEval-exe.exe`.
 
 ## Test
 
-Execute *stack test*.
+Execute `stack test`.
 
 ## License
 
