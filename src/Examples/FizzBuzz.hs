@@ -1,4 +1,4 @@
-module Examples
+module Examples.FizzBuzz
     ( someFunc
     ) where
 
