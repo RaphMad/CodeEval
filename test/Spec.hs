@@ -1,2 +1,8 @@
+module Main where
+
+import Test.Hspec
+import qualified FizzBuzzTests
+
 main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+main = hspec $ do
+   FizzBuzzTests.tests
