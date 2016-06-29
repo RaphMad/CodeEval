@@ -11,7 +11,7 @@ decimal :: Parser Int
 decimal = read <$> many1 digit
 
 whitespace :: Parser ()
-whitespace = void $ many $ oneOf " \n\t"
+whitespace = void . many $ oneOf " \n\t"
 
 parseSuccess :: Parser a -> String -> a
 parseSuccess parser input = let (Right result) = parse parser "" input in result
