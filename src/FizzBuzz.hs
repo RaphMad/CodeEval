@@ -22,10 +22,12 @@ instance Show Output where
    show (Number num) = show num
    show F            = "F"
    show B            = "B"
-   show FB            = "FB"
+   show FB           = "FB"
 
 input :: Parser Input
-input = Input <$> decimal <* whitespace <*> decimal <* whitespace <*> decimal
+input = Input <$> decimal <* whitespace
+              <*> decimal <* whitespace
+              <*> decimal
 
 process :: Input -> [Output]
 process (Input x y n) = map checkFizzBuzz [1..n]
