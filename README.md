@@ -1,7 +1,7 @@
 ## Introduction
 
 This project contains solutions and tests for the coding challenges provided by www.codeeval.com.
-It is based on [The Haskell Tool Stack](www.haskellstack.org).
+The project is based on www.haskellstack.org.
 
 ## Build
 
