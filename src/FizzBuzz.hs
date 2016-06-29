@@ -1,4 +1,4 @@
--- REMOVE THIS DECLARATION WHEN UPLOADING THE FILE!!!
+-- REMOVE THIS DECLARATION WHEN UPLOADING THE FILE TO www.codeeval.com!!!
 module FizzBuzz where
 
 import System.Environment (getArgs)
