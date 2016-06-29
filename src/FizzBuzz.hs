@@ -1,11 +1,7 @@
+-- REMOVE THIS DECLARATION WHEN UPLOADING THE FILE!!!
 module FizzBuzz where
 
-import Control.Applicative ((<$>), (<*>), (<*))
 import System.Environment (getArgs)
-import Text.Parsec.String (Parser)
-
-import Common
-import Parsers
 
 main :: IO ()
 main = do
@@ -14,7 +10,7 @@ main = do
    mapM_ (putStrLn . fizzBuzz) $ lines input
 
 fizzBuzz :: String -> String
-fizzBuzz line = printSpaced . process $ parseSuccess input line
+fizzBuzz line = printSpaced . process $ parse line
 
 data Input = Input Int Int Int
 data Output = Number Int | F | B | FB
@@ -24,10 +20,9 @@ instance Show Output where
    show B            = "B"
    show FB           = "FB"
 
-input :: Parser Input
-input = Input <$> decimal <* whitespace
-              <*> decimal <* whitespace
-              <*> decimal
+parse :: String -> Input
+parse line = Input x y n
+   where [x, y, n] = map read $ words line
 
 process :: Input -> [Output]
 process (Input x y n) = map checkFizzBuzz [1..n]
@@ -35,3 +30,8 @@ process (Input x y n) = map checkFizzBuzz [1..n]
                          | n `rem` x == 0                   = F
                          | n `rem` y == 0                   = B
                          | otherwise                        = Number n
+
+printSpaced :: (Show a) => [a] -> String
+printSpaced [] = ""
+printSpaced [x] = show x
+printSpaced (x : xs) = show x ++ " " ++ printSpaced xs
