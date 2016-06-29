@@ -10,3 +10,6 @@ main = do
 
 fizzBuzz :: String -> String
 fizzBuzz = id
+
+data Input = Input Int Int Int
+data Output = Int | F | B | FB

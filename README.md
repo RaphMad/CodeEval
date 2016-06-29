@@ -9,7 +9,7 @@ Execute `stack build`.
 
 ## Run
 
-Adapt **app\Main.hs** to point to the desired example, then execute `stack exec CodeEval-exe.exe`.
+Adapt **app\Main.hs** to point to the desired example, then execute `stack exec CodeEval-exe.exe <inputfile>`.
 
 ## Test
 
