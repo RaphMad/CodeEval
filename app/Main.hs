@@ -1,6 +1,6 @@
 module Main where
 
-import qualified FizzBuzz
+import qualified PrimePalindrome
 
 main :: IO ()
-main = FizzBuzz.main
+main = PrimePalindrome.main
