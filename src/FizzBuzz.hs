@@ -10,7 +10,7 @@ main = do
    mapM_ (putStrLn . fizzBuzz) $ lines input
 
 fizzBuzz :: String -> String
-fizzBuzz line = printSpaced . process $ parse line
+fizzBuzz line = toSpacedString . process $ parse line
 
 data Input = Input Int Int Int
 data Output = Number Int | F | B | FB
@@ -31,7 +31,7 @@ process (Input x y n) = map checkFizzBuzz [1..n]
                          | n `rem` y == 0                   = B
                          | otherwise                        = Number n
 
-printSpaced :: (Show a) => [a] -> String
-printSpaced [] = ""
-printSpaced [x] = show x
-printSpaced (x : xs) = show x ++ " " ++ printSpaced xs
+toSpacedString :: (Show a) => [a] -> String
+toSpacedString [] = ""
+toSpacedString [x] = show x
+toSpacedString (x : xs) = show x ++ " " ++ toSpacedString xs
