@@ -8,7 +8,10 @@ largestPrimePalindromeLessThan :: Integer -> Integer
 largestPrimePalindromeLessThan _ = 5
 
 primes :: [Integer]
-primes = [n | n <- 2 : [3..], not $ any (`divides` n) [2..ceiling . (sqrt :: Double -> Double) . fromIntegral $ n]]
+primes = [n | n <- 2 : [3..], not $ any (`divides` n) [2..sqrtInteger n]]
+
+sqrtInteger :: Integer -> Integer
+sqrtInteger = ceiling . (sqrt :: Double -> Double) . fromIntegral
 
 divides :: Integer -> Integer -> Bool
 divides d n = n `rem` d == 0
