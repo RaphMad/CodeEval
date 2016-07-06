@@ -17,8 +17,8 @@ divides :: Integer -> Integer -> Bool
 divides d n = n `rem` d == 0
 
 digits :: Integer -> [Integer]
-digits n | q > 0      = digits q ++ [r]
-         | otherwise  = [r]
+digits n | q > 0     = digits q ++ [r]
+         | otherwise = [r]
          where (q, r) = quotRem n 10
 
 isPalindrome :: Integer -> Bool
