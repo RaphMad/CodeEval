@@ -33,7 +33,8 @@ test-suite CodeEval-test
   type:                exitcode-stdio-1.0
   hs-source-dirs:      test
   main-is:             Spec.hs
-  other-modules:       FizzBuzzTests
+  other-modules:       FizzBuzzTests,
+                       PrimePalindromeTests
   build-depends:       base,
                        hspec,
                        CodeEval

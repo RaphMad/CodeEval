@@ -5,7 +5,7 @@ main :: IO ()
 main = print $ largestPrimePalindromeLessThan 1000
 
 largestPrimePalindromeLessThan :: Integer -> Integer
-largestPrimePalindromeLessThan _ = 5
+largestPrimePalindromeLessThan n = last . filter isPalindrome . takeWhile (< n) $ primes
 
 primes :: [Integer]
 primes = [n | n <- 2 : [3..], not $ any (`divides` n) [2..sqrtInteger n]]
@@ -15,3 +15,11 @@ sqrtInteger = ceiling . (sqrt :: Double -> Double) . fromIntegral
 
 divides :: Integer -> Integer -> Bool
 divides d n = n `rem` d == 0
+
+digits :: Integer -> [Integer]
+digits n | q > 0      = digits q ++ [r]
+         | otherwise  = [r]
+         where (q, r) = quotRem n 10
+
+isPalindrome :: Integer -> Bool
+isPalindrome n = digits n == reverse (digits n)

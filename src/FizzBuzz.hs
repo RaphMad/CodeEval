@@ -26,10 +26,10 @@ parse line = Input x y n
 
 process :: Input -> [Output]
 process (Input x y n) = map checkFizzBuzz [1..n]
-   where checkFizzBuzz n | n `rem` x == 0 && n `rem` y == 0 = FB
-                         | n `rem` x == 0                   = F
-                         | n `rem` y == 0                   = B
-                         | otherwise                        = Number n
+   where checkFizzBuzz i | i `rem` x == 0 && i `rem` y == 0 = FB
+                         | i `rem` x == 0                   = F
+                         | i `rem` y == 0                   = B
+                         | otherwise                        = Number i
 
 toSpacedString :: (Show a) => [a] -> String
 toSpacedString [] = ""
