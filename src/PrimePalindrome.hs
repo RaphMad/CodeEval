@@ -8,7 +8,7 @@ largestPrimePalindromeLessThan :: Integer -> Integer
 largestPrimePalindromeLessThan n = last . filter isPalindrome . takeWhile (< n) $ primes
 
 primes :: [Integer]
-primes = [n | n <- 2 : [3..], not $ any (`divides` n) [2..sqrtInteger n]]
+primes = 2 : [n | n <- 2 : [3..], not $ any (`divides` n) [2..sqrtInteger n]]
 
 sqrtInteger :: Integer -> Integer
 sqrtInteger = ceiling . (sqrt :: Double -> Double) . fromIntegral
